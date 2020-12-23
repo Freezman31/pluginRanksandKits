@@ -1,0 +1,21 @@
+name: xiw0ll
+author: Freezman31
+main: fr.freezman31.xiw0ll.Main
+version: 1.5.0
+api-version: 1.16
+commands:
+  role:
+    permission: staff.use
+  reset:
+    permission: sub.use
+  unrole:
+    permission: sub.use
+  kit:
+    description: Les kits
+  kitsetup:
+    permission: staff.use
+  experiment:
+    permission: staff.use
+  kitremove:
+    permission: staff.use
+database: true
