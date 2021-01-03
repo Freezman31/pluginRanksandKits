@@ -1,4 +1,4 @@
-# pluginRanks
+# pluginRanksandKits
 It's my plugin of ranks and kits
 
 For now, there is a lot of ranks :
