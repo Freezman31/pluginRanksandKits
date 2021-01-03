@@ -1,4 +1,4 @@
-name: xiw0ll
+name: RanksandKits
 author: Freezman31
 main: fr.freezman31.xiw0ll.Main
 version: 1.5.0
@@ -13,8 +13,6 @@ commands:
   kit:
     description: Les kits
   kitsetup:
-    permission: staff.use
-  experiment:
     permission: staff.use
   kitremove:
     permission: staff.use

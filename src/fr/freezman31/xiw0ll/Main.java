@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.Date;
 
 public class Main extends JavaPlugin {
-    public static String url = "jdbc:sqlite:plugins/ranks/sub.db";
+    public static String url = "jdbc:sqlite:plugins/ranks/ranks.db";
 
 
     @Override
@@ -56,17 +56,9 @@ public class Main extends JavaPlugin {
         if (!directory.exists()) {
             directory.mkdir();
         }
-        File database = new File("plugins/ranks/sub.db");
+        File database = new File("plugins/ranks/ranks.db");
         if (!database.exists()) {
-            createNewDatabase("sub.db");
-            createTable("sub1");
-            createTable("sub2");
-            createTable("sub3");
-            createTable("modo");
-            createTable("sm");
-            createTable("admin");
-            createTable("dev");
-            createTable("builder");
+            createNewDatabase("ranks.db");
             createTableKits();
             createTableCooldown();
         }

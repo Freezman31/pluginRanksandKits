@@ -2,9 +2,12 @@ package fr.freezman31.xiw0ll;
 
 import fr.freezman31.xiw0ll.commands.kits.CommandKitSetup;
 import fr.freezman31.xiw0ll.utils.base64;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.block.Beacon;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -22,7 +25,6 @@ import java.util.ArrayList;
 import static fr.freezman31.xiw0ll.commands.kits.CommandKit.kitReceive;
 
 public class listener implements Listener {
-    private String kitContent;
     private ItemStack[] contents;
 
     @EventHandler
@@ -164,7 +166,7 @@ public class listener implements Listener {
                 ItemMeta itNM = itN.getItemMeta();
                 itNM.setDisplayName(CommandKitSetup.name);
                 itN.setItemMeta(itNM);
-                this.kitContent = base64.itemStackArrayToBase64(this.contents);
+                String kitContent = base64.itemStackArrayToBase64(this.contents);
                 if (CommandKitSetup.permission != null) {
                     Main.insertKitPerms(CommandKitSetup.name, kitContent, CommandKitSetup.permission, base64.itemStackToBase64(itN), CommandKitSetup.cooldown);
                 } else {
